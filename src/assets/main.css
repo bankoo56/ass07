@@ -1,0 +1,45 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  background-image: url(https://img.freepik.com/free-vector/shiny-white-gray-background-with-wavy-lines_1017-25101.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: rgb(227, 242, 227);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(80, 100%, 79%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    margin-top: 5vh;
+
+  }
+
+  #app {
+    width: 100%;
+    padding: 0.5rem 2rem 2rem 2rem;
+  }
+}
+.font-tab{
+  font-size: 20px;
+  text-shadow: 1px 1px 10px wheat; 
+  -webkit-text-stroke: 0.5px black;
+
+}
