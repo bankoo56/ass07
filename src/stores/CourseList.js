@@ -94,10 +94,16 @@ export const add_drop = defineStore("myCart", () => {
         name: name,
         credit: credit,
     };
-    myCart.value.push(Subject);
+    if (Subject.code in myCart){
+        
+    }else{
+        myCart.value.push(Subject);
+    }
   };
   const Drop = (n) => {
     myCart.value.splice(n, 1);
   };
   return { myCart, Add, Drop };
-});
+})
+
+

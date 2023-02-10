@@ -1,8 +1,10 @@
 <script setup>
-import { useCourse,add_drop } from "../stores/array.js";
+import { useCourse,add_drop } from "../stores/CourseList.js";
 const { list } = useCourse();
-const { myCart, Add, Drop } = add_drop();
+const { myCart, Add} = add_drop();
+
 </script>
+
 
 <template>
 	<div class="container-fluid">
@@ -15,7 +17,7 @@ const { myCart, Add, Drop } = add_drop();
 
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">ปี2 เทอม2</h6>
+				<h6 class="m-0 font-weight-bold text-primary">รายวิชาที่สามารถลงทะเบียน</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -25,11 +27,11 @@ const { myCart, Add, Drop } = add_drop();
 							id="ctl00_ContentPlaceHolder1_gv22" style="border-collapse:collapse;">
 							<tbody>
 								<tr>
-									<th scope="col">ลำดับ</th>
-									<th scope="col">รายวิชา</th>
-									<th scope="col">หน่วยกิต</th>
+									<td>รหัส</td>
+									<td>รายวิชา</td>
+									<td>หน่วยกิต</td>
 								</tr>
-								<tr v-for="n in list.length">
+								<tr v-for="n in list.length ">
 									<td>
   										{{ list[n - 1].code }}
 									</td>
@@ -40,12 +42,13 @@ const { myCart, Add, Drop } = add_drop();
 										{{ list[n - 1].credit }}
 									</td>
 									<td class="text-center">
-										<button class="btn btn-success"
-        								@click="Add(list[n - 1].code, list[n - 1].name, list[n - 1].credit)">
+										<v-btn icon color="green" 
+        								@click="Add(list[n - 1].code, list[n - 1].name, list[n - 1].credit); alert(); ">
 										<i class="bi bi-cart-plus"></i>
-										</button>
+										</v-btn>
 									</td>
 								</tr>
+								
 							</tbody>
 						</table>
 
@@ -54,7 +57,21 @@ const { myCart, Add, Drop } = add_drop();
 			</div>
 
 		</div>
-
 	</div>
+	<div>
+
+	
+</div>
+
 </template>
 
+<script>
+export default {
+  methods: {
+    alert: function() {
+      alert( 'เพิ่มลงตะกร้าเรียนร้อย!!!' );
+
+    }
+  }
+};
+</script>

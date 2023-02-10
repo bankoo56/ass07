@@ -1,13 +1,13 @@
 <script setup>
-import { useCourse,add_drop } from "../stores/array.js";
+import { useCourse,add_drop } from "../stores/CourseList.js";
 const { list } = useCourse();
-const { myCart, Add, Drop } = add_drop();
+const { myCart, Drop } = add_drop();
 </script>
 
 <template>
     <div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="text-center  m-0 font-weight-bold text-primary">เพิ่มถอนรายวิชา</h6>
+				<h6 class="text-center  m-0 font-weight-bold text-primary">ตะกร้าของคุณ</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -17,9 +17,9 @@ const { myCart, Add, Drop } = add_drop();
 							id="ctl00_ContentPlaceHolder1_gv22" style="border-collapse:collapse;">
 							<tbody>
 								<tr>
-									<th scope="col">ลำดับ</th>
-									<th scope="col">รายวิชา</th>
-									<th scope="col">หน่วยกิต</th>
+									<td>รหัส</td>
+									<td>รายวิชา</td>
+									<td>หน่วยกิต</td>
 								</tr>
 								<tr v-for="n in myCart.length">
 									<td>
@@ -33,7 +33,9 @@ const { myCart, Add, Drop } = add_drop();
 									</td>
 									<td class="text-center">
 										
-										<i class="shadow bi-x-circle-fill" @click="Drop(n - 1)"></i>
+										<v-btn icon color="gray" @click="Drop(n - 1)">
+											<i class="bi bi-x-lg"></i>
+										</v-btn>
 									
 									</td>
 								</tr>
@@ -46,7 +48,9 @@ const { myCart, Add, Drop } = add_drop();
 
 		</div>
 
-
+		<div>
+			{{ myCart }}
+		</div>
 </template>
 <style scoped>
     i{
