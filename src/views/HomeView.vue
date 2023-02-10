@@ -22,6 +22,9 @@ import TheWelcome from '../components/TheWelcome.vue'
         <div class="carousel-item">
           <img src="https://scontent.fbkk7-2.fna.fbcdn.net/v/t39.30808-6/328674537_877668393381157_6924670978012438076_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_ohc=DXuTECh8Xv4AX_TC1u1&_nc_ht=scontent.fbkk7-2.fna&oh=00_AfD1HoZoIAVBhJAG5ehKIdkyUMWX4390207qdDd34yFGTw&oe=63E3B764" class="d-block w-100" alt="..." style="height: 50rem;">
         </div>
+        <div class="carousel-item">
+          <img src="https://www.mju.ac.th/th/images/BN_News1.jpg" class="d-block w-100" alt="..." style="height: 50rem;">
+        </div>
       </div>
       <div class="text-center" style="margin: 1vh 0vh -1vh 3vh ; text-shadow: 1px 0px 4px darkslategray;">
       ติดตามข่าวสารเพิ่มเติมได้ที่ ⬇
