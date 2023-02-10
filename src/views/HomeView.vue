@@ -4,7 +4,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
 
-<div style="display: flex; justify-content: center; margin-top: 5vh; margin-bottom: 5vh;">
+<div style="display: flex; justify-content: center; margin-bottom: 5vh;">
   <div class="card" style="width: 50rem; box-shadow: 5px 5px 30px; background-color: whitesmoke;">
     <div class="text-center font-weight-bold text-uppercase" style="font-size: 25px; margin-top: 1rem;">
       <i class="bi bi-megaphone"></i>

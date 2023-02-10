@@ -29,12 +29,13 @@ a,
   body {
     display: flex;
     margin-top: 5vh;
+    
 
   }
 
   #app {
     width: 100%;
-    padding: 0.5rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 .font-tab{
